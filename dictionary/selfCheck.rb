@@ -1,6 +1,6 @@
 $location = 1
 
-def  if_empty(line)
+def if_empty(line)
   puts $location if line.empty?
 end
 
