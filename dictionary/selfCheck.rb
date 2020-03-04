@@ -1,7 +1,20 @@
 $location = 1
 
+def format(line)
+  if line =~ /「.*」「.*」「.*」/
+    $location += 1
+  elsif line =~/^#/
+    $location += 1
+  else
+    puts line.inspect
+    p line.chomp.empty?
+    puts $location
+    $location += 1
+  end
+end
+
 def if_empty(line)
-  puts $location if line.empty?
+  puts $location if line.chomp.empty?
 end
 
 def part_of_speech(line)
@@ -36,17 +49,6 @@ def part_of_speech(line)
         p $location
       end
     end
-  end
-end
-
-def format(line)
-  if line =~ /「.*」「.*」「.*」/
-    $location += 1
-  elsif line =~/^#/
-    $location += 1
-  else
-    puts $location
-    $location += 1
   end
 end
 
