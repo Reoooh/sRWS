@@ -1,19 +1,11 @@
 $location = 1
 
-def format(line)
-  if line =~ /「.*」「.*」「.*」/
-    $location += 1
-  elsif line =~/^#/
-    $location += 1
-  else
-    puts $location
-    $location += 1
-  end
+def  if_empty(line)
+  puts $location if line.empty?
 end
 
 def part_of_speech(line)
-  if line =~/^#/
-  else
+  if line !~/^#/
     line = line.split('」「')
     pos = line[1].to_s
     pos = pos.split('.')
@@ -47,14 +39,25 @@ def part_of_speech(line)
   end
 end
 
+def format(line)
+  if line =~ /「.*」「.*」「.*」/
+    $location += 1
+  elsif line =~/^#/
+    $location += 1
+  else
+    puts $location
+    $location += 1
+  end
+end
 
 filename = "Japanese_Dictionary"
 file = File.open(filename)
 
 file.each_line do |line|
+  if_empty(line)
   part_of_speech(line)
   format(line)
 end
 
 file.close
-puts $location
+puts "Finished in #{$location-1}"
