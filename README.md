@@ -5,7 +5,7 @@ A simple Ruby project for Chinese &amp; Japanese word segmentation
 ## Installation
 
 ```bash
-git clone https://github.com/Reoooh/sRWS
+git clone https://github.com/Reoooh/sRWS.git
 ```
 
 ## Function & Description
