@@ -16,7 +16,9 @@ All methods of this word segmentation project are based on the String matching t
 
 **Segmentation algorithm:**
 >forward maximum matching method
+
 >backward maximum matching method
+
 >bidirectional maximum matching method 
 
 **Dictionary source:**
