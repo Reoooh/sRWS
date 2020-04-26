@@ -54,28 +54,28 @@ BIDIRECTIONAL: ["中文", "分词", "测试"]
 And test the time spent on word segmentation processing.
 
 ```bash
->>ruby Connectertest.rb "你好，世界"
-FORWARD: ["你好", "，", "世界"]
+>>ruby Connectertest.rb "中文分词测试"
+FORWARD: ["中文", "分词", "测试"]
 Rehearsal ----------------------------------------------
-search:      2.437000   0.047000   2.484000 (  2.545016)
-------------------------------------- total: 2.484000sec
+search:      3.906000   0.047000   3.953000 (  4.091308)
+------------------------------------- total: 3.953000sec
 
                  user     system      total        real
-search:      2.500000   0.016000   2.516000 (  2.553651)
-BACKWARD: ["你好", "，", "世界"]
+search:      4.266000   0.047000   4.313000 (  4.481178)
+BACKWARD: ["中文", "分词", "测试"]
 Rehearsal ----------------------------------------------
-search:      1.812000   0.000000   1.812000 (  1.887981)
-------------------------------------- total: 1.812000sec
+search:      2.938000   0.047000   2.985000 (  3.071883)
+------------------------------------- total: 2.985000sec
 
                  user     system      total        real
-search:      1.875000   0.000000   1.875000 (  1.872802)
-BIDIRECTIONAL: ["你好", "，", "世界"]
+search:      2.890000   0.047000   2.937000 (  3.084197)
+BIDIRECTIONAL: ["中文", "分词", "测试"]
 Rehearsal ----------------------------------------------
-search:      4.375000   0.031000   4.406000 (  4.446057)
-------------------------------------- total: 4.406000sec
+search:      6.938000   0.125000   7.063000 (  7.202268)
+------------------------------------- total: 7.063000sec
 
                  user     system      total        real
-search:      4.329000   0.015000   4.344000 (  4.433899)
+search:      7.672000   0.094000   7.766000 (  7.912471)
 ```
 
 ### JWS
@@ -96,9 +96,7 @@ search:     31.531000   0.796000  32.327000 ( 32.399480)
 search:     35.328000   0.813000  36.141000 ( 36.839869)
 ```
 
-Actually, the correct writing is as follows. 
-
-Hence you can find out the flaws in this word segmentation processing project: program cannot recognize words that not included in the dictionary.
+Actually, the correct Japanese sentences is as follows:
 
 ```bash
 >>ruby Connecter.rb "日本言葉語区分するテスト"
@@ -115,6 +113,8 @@ search:     32.344000   0.563000  32.907000 ( 32.941230)
                  user     system      total        real
 search:     31.969000   0.984000  32.953000 ( 32.970740)
 ```
+
+Hence you can find out the flaws in this word segmentation processing project: program cannot recognize words that not included in the dictionary.
 
 ## License
 
