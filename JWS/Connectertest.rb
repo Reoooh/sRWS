@@ -1,7 +1,7 @@
 require 'benchmark'
 require_relative 'mod/forward_segment'
 
-test = "いつか北海道へ行きたいです。"
+test = ARGV[0]
 dic = "dic/full_JD"
 
 outcome = forward_segment(test, dic)

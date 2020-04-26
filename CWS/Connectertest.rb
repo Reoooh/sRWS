@@ -5,7 +5,7 @@ require_relative 'mod/backward_segment'
 require_relative 'mod/forward_segment'
 require_relative 'mod/bidirectional_segment'
 
-test = "研究生命起源"
+test = ARGV[0]
 dic = "dic/Hanlp_CoreNatureDictionary_mini.txt"
 
 outcome1 = forward_segment(test, dic)
