@@ -26,7 +26,7 @@ This project can be applied to Chinese and Japanese word segmentation.
 >bidirectional maximum matching method 
 
 **Dictionary source:**
->The dictionary for Chinese Word Segmentation comes from the open source project [HanLP](https://github.com/hankcs/HanLP).
+>The dictionary for Chinese Word Segmentation comes from the open source project [**HanLP**](https://github.com/hankcs/HanLP).
 
 ### JWS [Japanese Word Segmentation]
 
