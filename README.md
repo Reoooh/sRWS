@@ -99,7 +99,7 @@ search:     35.328000   0.813000  36.141000 ( 36.839869)
 Actually, the correct Japanese sentences is as follows:
 
 ```bash
->>ruby Connecter.rb "日本言葉語区分するテスト"
+>>ruby Connecter.rb "日本語単語分割テスト"
 FORWARD: ["日本語", "単", "語", "分", "割", "テスト"]
 ```
 
