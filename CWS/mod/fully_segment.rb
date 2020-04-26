@@ -1,5 +1,4 @@
-# test = "商品和服务"
-test = "就读北京大学"
+test = "商品和服务"
 dic = "dic/Hanlp_CoreNatureDictionary_mini.txt"
 
 def fully_segment(text, dic)

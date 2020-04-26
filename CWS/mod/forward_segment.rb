@@ -1,21 +1,3 @@
-=begin
-io = File.open("dic/Hanlp_CoreNatureDictionary_mini.txt")
-n = 0
-io.each_line do
-  n += 1
-end
-io.close
-puts n
-
-p Dir.pwd
-Dir.chdir("dic")
-p Dir.pwd
-=end
-
-#test = "就读北京大学"
-#test = "研究生命起源"
-#dic = "dic/Hanlp_CoreNatureDictionary_mini.txt"
-
 def forward_segment(text, dic)
 
   word_list = Array.new
@@ -61,5 +43,3 @@ def forward_segment(text, dic)
   word_list
 
 end
-
-# forward_segment(test, dic)

@@ -1,7 +1,3 @@
-# test = "研究生命起源"
-#test = "项目的研究"
-#dic = "dic/Hanlp_CoreNatureDictionary_mini.txt"
-
 def backward_segment(text, dic)
 
   word_list = Array.new
@@ -49,5 +45,3 @@ def backward_segment(text, dic)
   word_list
 
 end
-
-# backward_segment(test, dic)
