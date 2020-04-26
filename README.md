@@ -42,7 +42,7 @@ This project can be applied to Chinese and Japanese word segmentation.
 
 ### CWS
 
-You can start like this.
+You can start like this:
 
 ```bash
 >>ruby Connecter.rb "中文分词测试"
