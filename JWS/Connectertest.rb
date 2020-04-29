@@ -8,5 +8,5 @@ outcome = forward_segment(test, dic)
 
 p outcome
 Benchmark.bmbm(10) do |t|
-  t.report("search:"){forward_segment(test, dic)}
+  t.report("time:"){forward_segment(test, dic)}
 end
