@@ -12,19 +12,19 @@ outcome1 = forward_segment(test, dic)
 
 p outcome1
 Benchmark.bmbm(10) do |t|
-  t.report("search:"){forward_segment(test, dic)}
+  t.report("time:"){forward_segment(test, dic)}
 end
 
 outcome2 = backward_segment(test, dic)
 
 p outcome2
 Benchmark.bmbm(10) do |t|
-  t.report("search:"){backward_segment(test, dic)}
+  t.report("time:"){backward_segment(test, dic)}
 end
 
 outcome3 = bidirectional_segment(test, dic)
 
 p outcome3
 Benchmark.bmbm(10) do |t|
-  t.report("search:"){bidirectional_segment(test, dic)}
+  t.report("time:"){bidirectional_segment(test, dic)}
 end
