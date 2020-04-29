@@ -45,6 +45,7 @@ This project can be applied to Chinese and Japanese word segmentation.
 You can start like this:
 
 ```bash
+\WS\CWS
 >>ruby Connecter.rb "中文分词测试"
 FORWARD: ["中文", "分词", "测试"]
 BACKWARD: ["中文", "分词", "测试"]
@@ -54,64 +55,70 @@ BIDIRECTIONAL: ["中文", "分词", "测试"]
 And test the time spent on word segmentation processing.
 
 ```bash
+\WS\CWS
 >>ruby Connectertest.rb "中文分词测试"
 FORWARD: ["中文", "分词", "测试"]
 Rehearsal ----------------------------------------------
-search:      3.906000   0.047000   3.953000 (  4.091308)
-------------------------------------- total: 3.953000sec
+time:        3.469000   0.046000   3.515000 (  3.531568)
+------------------------------------- total: 3.515000sec
 
                  user     system      total        real
-search:      4.266000   0.047000   4.313000 (  4.481178)
+time:        3.281000   0.063000   3.344000 (  3.373417)
 BACKWARD: ["中文", "分词", "测试"]
 Rehearsal ----------------------------------------------
-search:      2.938000   0.047000   2.985000 (  3.071883)
-------------------------------------- total: 2.985000sec
+time:        2.719000   0.015000   2.734000 (  2.758816)
+------------------------------------- total: 2.734000sec
 
                  user     system      total        real
-search:      2.890000   0.047000   2.937000 (  3.084197)
+time:        2.625000   0.047000   2.672000 (  2.796045)
 BIDIRECTIONAL: ["中文", "分词", "测试"]
 Rehearsal ----------------------------------------------
-search:      6.938000   0.125000   7.063000 (  7.202268)
-------------------------------------- total: 7.063000sec
+time:        5.828000   0.078000   5.906000 (  5.913542)
+------------------------------------- total: 5.906000sec
 
                  user     system      total        real
-search:      7.672000   0.094000   7.766000 (  7.912471)
+time:        5.828000   0.093000   5.921000 (  5.946587)
+
 ```
 
 ### JWS
 
 ```bash
+\WS\JWS
 >>ruby Connecter.rb "日本語言葉区分するテスト"
 FORWARD: ["日本語", "言葉", "区分する", "テスト"]
 ```
 
 ```bash
+\WS\JWS
 >>ruby Connectertest.rb "日本語言葉区分するテスト"
 ["日本語", "言葉", "区分する", "テスト"]
 Rehearsal ----------------------------------------------
-search:     31.531000   0.796000  32.327000 ( 32.399480)
------------------------------------- total: 32.327000sec
+time:       32.922000   0.734000  33.656000 ( 33.757088)
+------------------------------------ total: 33.656000sec
 
                  user     system      total        real
-search:     35.328000   0.813000  36.141000 ( 36.839869)
+time:       37.218000   0.860000  38.078000 ( 39.532077)
 ```
 
 Actually, the correct Japanese sentences is as follows:
 
 ```bash
+\WS\JWS
 >>ruby Connecter.rb "日本語単語分割テスト"
 FORWARD: ["日本語", "単", "語", "分", "割", "テスト"]
 ```
 
 ```bash
+\WS\JWS
 >>ruby Connectertest.rb "日本語単語分割テスト"
 ["日本語", "単", "語", "分", "割", "テスト"]
 Rehearsal ----------------------------------------------
-search:     32.344000   0.563000  32.907000 ( 32.941230)
+time:     32.344000   0.563000  32.907000 ( 32.941230)
 ------------------------------------ total: 32.907000sec
 
                  user     system      total        real
-search:     31.969000   0.984000  32.953000 ( 32.970740)
+time:     31.969000   0.984000  32.953000 ( 32.970740)
 ```
 
 Hence you can find out the flaws in this word segmentation processing project: program cannot recognize words that not included in the dictionary.
