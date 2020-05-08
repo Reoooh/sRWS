@@ -114,11 +114,11 @@ FORWARD: ["日本語", "単", "語", "分", "割", "テスト"]
 >>ruby Connectertest.rb "日本語単語分割テスト"
 ["日本語", "単", "語", "分", "割", "テスト"]
 Rehearsal ----------------------------------------------
-time:     32.344000   0.563000  32.907000 ( 32.941230)
+time:       32.344000   0.563000  32.907000 ( 32.941230)
 ------------------------------------ total: 32.907000sec
 
                  user     system      total        real
-time:     31.969000   0.984000  32.953000 ( 32.970740)
+time:       31.969000   0.984000  32.953000 ( 32.970740)
 ```
 
 Hence you can find out the flaws in this word segmentation processing project: program cannot recognize words that not included in the dictionary.
