@@ -10,6 +10,8 @@ git clone https://github.com/Reoooh/sRWS.git
 
 Please make sure the Ruby environment is installed.
 
+`PS`: I recommend using [brew](https://github.com/topics/homebrew) to install [rbenv](https://github.com/rbenv/rbenv) to manage [Ruby](https://www.ruby-lang.org/zh_cn/) version.
+
 ## Function & Description
 
 All methods of this word segmentation project are based on the String matching theory [dictionary scheme].
